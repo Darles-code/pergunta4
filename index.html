@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pergunta 4: Digite sua resposta</h1>
+    <input type="text" id="answer" placeholder="Sua resposta" />
+    <button onclick="checkAnswer()">Enviar</button>
+    <div class="message" id="message"></div>
+
+    <script>
+        function checkAnswer() {
+            var correctAnswers = ["hemofilia"];
+            var userAnswer = document.getElementById("answer").value.toLowerCase();
+
+            if (correctAnswers.includes(userAnswer)) {
+                document.getElementById("message").innerHTML = "Parabéns! Resposta correta! Senha para o próximo desafio: 2710";
+            } else {
+                document.getElementById("message").innerHTML = "Tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>
